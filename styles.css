@@ -1,0 +1,397 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Ubuntu,
+    Cantarell, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: #0d1117;
+}
+
+.topCurtain {
+  background: #ef3124;
+}
+
+.topCurtain__inner {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 26px 32px 82px;
+}
+
+.topCurtain__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+    "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.promo {
+  width: 100%;
+  max-width: 1024px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-top-left-radius: 44px;
+  border-top-right-radius: 44px;
+  margin: -44px auto 0;
+  padding-top: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.promo__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px 6px;
+}
+
+.promo__title {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+    "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: rgba(3, 3, 6, 0.88);
+}
+
+.promo__titleAccent {
+  font-weight: 700;
+  color: rgba(3, 3, 6, 0.88);
+}
+
+.promo__arrows {
+  display: flex;
+  gap: 12px;
+  padding-right: 0;
+  margin-top: 7px; /* опускаем стрелки к уровню заголовка */
+}
+
+.arrowBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(244, 246, 250, 0.95);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrowBtn__icon {
+  font-size: 20px;
+  line-height: 1;
+  color: #0d1117;
+  transform: translateY(-2px);
+}
+
+.promo__viewport {
+  width: 100%;
+  margin-top: 8px; /* чуть ниже от заголовка */
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.promo__viewport::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.promo__track {
+  display: inline-flex;
+  gap: 24px;
+  overflow-x: visible;
+  overscroll-behavior-block: contain;
+  overscroll-behavior-x: contain;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  transform: translateX(0);
+}
+
+.promo__track::before,
+.promo__track::after {
+  content: "";
+  flex: 0 0 8px; /* 8 + gap(24) = 32, выравниваем с заголовком */
+}
+
+.promo__track::after {
+  flex-basis: 0; /* в конце без правого отступа */
+}
+
+.promoCard {
+  width: 363px; /* ширина = 1.1 * высота */
+  height: 330px;
+  border-radius: 32px;
+  background: #f2f3f5;
+  overflow: visible;
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0 0 auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: transform 520ms ease;
+  will-change: transform;
+  transform-origin: center bottom;
+}
+
+.promoCard:hover {
+  transform: scale(1.03);
+}
+
+.promoCard__art {
+  height: 210px;
+  position: relative;
+  min-height: 126px;
+  box-sizing: border-box;
+  padding: 0;
+  /* “картинка” внутри карточки (как в DOM): */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.emojiArt {
+  position: absolute;
+  top: -18px; /* визуально “вылезает” сверху карточки */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 92px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.emojiArt--left {
+  left: 32%;
+  transform: translateX(-50%);
+}
+
+.emojiArt--right {
+  left: 68%;
+  transform: translateX(-50%);
+}
+
+.promoCard__imgTop {
+  position: absolute;
+  top: -66px; /* еще выше */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 285px;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.promoCard__text {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  top: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100px; /* фиксируем высоту блока, чтобы заголовки не “плыли” */
+}
+
+.promoCard__name {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+    "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: rgba(3, 3, 6, 0.88);
+}
+
+.promoCard__name--small {
+  margin-top: 4px;
+}
+
+.promoCard__desc {
+  margin-top: 8px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+    "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(3, 3, 6, 0.88);
+}
+
+/* Card backgrounds */
+.promoCard--green {
+  background: linear-gradient(180deg, #c9f7b1 0%, #a7f0a3 100%);
+}
+.promoCard--green .promoCard__art {
+  background: transparent;
+}
+.artBlob {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 90px;
+  height: 90px;
+  border-radius: 26px;
+  background: rgba(11, 99, 255, 0.18);
+}
+.artBlob--blue {
+  background: radial-gradient(circle at 30% 30%, #60a8ff, #0b63ff);
+  box-shadow: 0 20px 40px rgba(11, 99, 255, 0.18);
+}
+.artGift {
+  position: absolute;
+  left: 66px;
+  top: 72px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(238, 52, 36, 0.85);
+}
+.artGift__band {
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 50px;
+  height: 10px;
+  background: rgba(88, 64, 180, 0.9);
+  border-radius: 10px;
+}
+.artPhone {
+  position: absolute;
+  left: 138px;
+  top: 66px;
+  width: 72px;
+  height: 80px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ff5b43, #c81b1b);
+}
+.artRobot {
+  position: absolute;
+  left: 170px;
+  top: 100px;
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 35% 30%, #b07cff, #4b1fd8);
+}
+
+.promoCard--purple {
+  background: linear-gradient(180deg, #d7b7ff 0%, #c9a3ff 100%);
+}
+.promoCard--purple .promoCard__art {
+  background: transparent;
+}
+.artTag {
+  position: absolute;
+  left: 76px;
+  top: 76px;
+  font-weight: 900;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.62);
+  transform: rotate(-12deg);
+}
+.artTagValue {
+  position: absolute;
+  left: 102px;
+  top: 92px;
+  font-weight: 1000;
+  font-size: 34px;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+.artTagValue__ruble {
+  font-size: 14px;
+  margin-left: 6px;
+  font-weight: 1000;
+}
+.artHearts {
+  position: absolute;
+  left: 50px;
+  top: 56px;
+  width: 70px;
+  height: 70px;
+  border-radius: 26px;
+  background: radial-gradient(circle at 40% 30%, #ff7a7a, #e11d48);
+  opacity: 0.95;
+}
+
+.promoCard--teal {
+  background: linear-gradient(180deg, #a2f1ef 0%, #78e2ea 100%);
+}
+.promoCard--teal .promoCard__art {
+  background: transparent;
+}
+.artChart {
+  position: absolute;
+  left: 60px;
+  top: 80px;
+  width: 120px;
+  height: 86px;
+  border-radius: 20px;
+  background: rgba(11, 99, 255, 0.18);
+  border: 1px solid rgba(11, 99, 255, 0.18);
+}
+.artCoin {
+  position: absolute;
+  left: 154px;
+  top: 62px;
+  width: 66px;
+  height: 66px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 25%, #ffe45b, #ff8a1f);
+  box-shadow: 0 20px 40px rgba(255, 138, 31, 0.22);
+}
+.artPlus {
+  position: absolute;
+  left: 202px;
+  top: 50px;
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  background: rgba(238, 52, 36, 0.9);
+}
+.artPlus::before,
+.artPlus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  border-radius: 6px;
+  transform: translate(-50%, -50%);
+}
+.artPlus::before {
+  width: 22px;
+  height: 6px;
+}
+.artPlus::after {
+  width: 6px;
+  height: 22px;
+}
+
+.promoCard--pink {
+  background: linear-gradient(180deg, #dcb6ff 0%, #cba2ff 100%);
+}
+
+@media (max-width: 1040px) {
+  .promo {
+    width: 100%;
+  }
+  .promo__viewport {
+    width: 100%;
+  }
+}
+
