@@ -13,8 +13,6 @@ body {
 
 .topCurtain__inner {
   width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
   box-sizing: border-box;
   padding: 26px 32px 82px;
 }
@@ -137,6 +135,28 @@ body {
 
 .promo__track::after {
   flex-basis: 0; /* в конце без правого отступа */
+}
+
+.promo__summary {
+  padding: 0 32px 32px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+    "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
+}
+
+.promo__summaryLabel {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(3, 3, 6, 0.55);
+  margin-bottom: 4px;
+}
+
+.promo__summaryValue {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(3, 3, 6, 0.88);
 }
 
 .promoCard {
