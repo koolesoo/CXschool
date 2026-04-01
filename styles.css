@@ -45,6 +45,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 0 32px 6px;
 }
 
@@ -106,7 +110,9 @@ body {
 
 .promo__viewport {
   width: 100%;
-  margin-top: 8px; /* чуть ниже от заголовка */
+  max-width: 1024px;
+  margin: 8px auto 0; /* чуть ниже от заголовка, выравниваем как шторку */
+  box-sizing: border-box;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -462,6 +468,18 @@ body {
 
 .promoCard--pink {
   background: linear-gradient(180deg, #dcb6ff 0%, #cba2ff 100%);
+}
+
+.promoCard--yellow {
+  background: linear-gradient(180deg, #ffe7a3 0%, #ffd073 100%);
+}
+
+.promoCard--blue {
+  background: linear-gradient(180deg, #c3e5ff 0%, #98cfff 100%);
+}
+
+.promoCard--orange {
+  background: linear-gradient(180deg, #ffcfb3 0%, #ff9f6e 100%);
 }
 
 @media (max-width: 1040px) {
