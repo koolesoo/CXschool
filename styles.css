@@ -153,10 +153,11 @@ body {
 }
 
 .promo__summaryValue {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
-  color: rgba(3, 3, 6, 0.88);
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  color: rgba(3, 3, 6, 0.88); /* как у заголовка КП, но меньше размер */
 }
 
 .promoCard {
