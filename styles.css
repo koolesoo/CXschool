@@ -106,7 +106,7 @@ body {
 
 .promo__viewport {
   width: 100%;
-  margin-top: 16px; /* чуть ниже от заголовка */
+  margin-top: 32px; /* еще ниже от заголовка, чтобы картинки не пересекались с ним */
   overflow-x: auto;
   overflow-y: visible; /* чтобы при ховере карточки не обрезались сверху */
   -webkit-overflow-scrolling: touch;
