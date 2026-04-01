@@ -224,7 +224,7 @@ body {
 
 .promoCard__imgTop {
   position: absolute;
-  top: -66px; /* еще выше */
+  top: -66px; /* базовая позиция */
   left: 50%;
   transform: translateX(-50%);
   width: 285px;
@@ -232,6 +232,10 @@ body {
   z-index: 3;
   pointer-events: none;
   user-select: none;
+}
+
+.promoCard__imgTop--tall {
+  top: -48px; /* чуть ниже, чтобы высокие изображения не резались */
 }
 
 .promoCard__text {
