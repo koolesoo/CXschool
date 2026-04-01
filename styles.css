@@ -191,6 +191,7 @@ body {
   min-height: 126px;
   box-sizing: border-box;
   padding: 0;
+  cursor: pointer;
   /* “картинка” внутри карточки (как в DOM): */
   background-position: center center;
   background-repeat: no-repeat;
@@ -241,6 +242,7 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   height: 100px; /* фиксируем высоту блока, чтобы заголовки не “плыли” */
+  cursor: pointer;
 }
 
 .promoCard__name {
