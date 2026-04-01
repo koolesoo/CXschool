@@ -31,7 +31,7 @@
 
       <div class="promo__viewport" role="group" aria-label="Промо-карточки">
         <div class="promo__track">
-          <article class="promoCard promoCard--green" aria-label="Сбор обратной связи">
+          <article class="promoCard promoCard--green" aria-label="Сбор обратной связи" data-popup-index="0">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
@@ -49,11 +49,11 @@
             </div>
           </article>
 
-          <article class="promoCard promoCard--purple" aria-label="Деньги вам и друзьям">
+          <article class="promoCard promoCard--purple" aria-label="Мотивация" data-popup-index="1">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
-                src="./10.png"
+                src="./5.png"
                 width="256"
                 height="256"
                 alt=""
@@ -67,7 +67,7 @@
             </div>
           </article>
 
-          <article class="promoCard promoCard--teal" aria-label="Высокие ставки по Альфа-Вкладу">
+          <article class="promoCard promoCard--teal" aria-label="Управление" data-popup-index="2">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
@@ -86,7 +86,7 @@
           </article>
 
           <!-- 4-я карточка частично видна (как на скрине) -->
-          <article class="promoCard promoCard--pink" aria-hidden="true">
+          <article class="promoCard promoCard--pink" aria-hidden="true" data-popup-index="3">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
@@ -102,7 +102,7 @@
             </div>
           </article>
 
-          <article class="promoCard promoCard--green" aria-hidden="true">
+          <article class="promoCard promoCard--green" aria-hidden="true" data-popup-index="4">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
@@ -118,11 +118,11 @@
             </div>
           </article>
 
-          <article class="promoCard promoCard--teal" aria-hidden="true">
+          <article class="promoCard promoCard--teal" aria-hidden="true" data-popup-index="5">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
-                src="./10.png"
+                src="./5.png"
                 width="256"
                 height="256"
                 alt=""
@@ -134,11 +134,11 @@
             </div>
           </article>
 
-          <article class="promoCard promoCard--purple" aria-hidden="true">
+          <article class="promoCard promoCard--purple" aria-hidden="true" data-popup-index="6">
             <div class="promoCard__art" aria-hidden="true">
               <img
                 class="promoCard__imgTop"
-                src="./10.png"
+                src="./5.png"
                 width="256"
                 height="256"
                 alt=""
@@ -152,6 +152,17 @@
         </div>
       </div>
     </main>
+
+    <section class="popup" id="cardPopup" hidden>
+      <div class="popup__backdrop" data-popup-close></div>
+      <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <button class="popup__close" type="button" aria-label="Закрыть" data-popup-close>
+          ×
+        </button>
+        <h3 class="popup__title" id="popupTitle"></h3>
+        <p class="popup__text" id="popupText"></p>
+      </div>
+    </section>
 
     <script src="./script.js"></script>
   </body>
