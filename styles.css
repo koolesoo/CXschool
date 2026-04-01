@@ -44,6 +44,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 32px 6px;
+  position: relative;
+  z-index: 1;
 }
 
 .promo__headerText {
@@ -109,6 +111,8 @@ body {
   overflow-y: visible; /* чтобы при ховере карточки не обрезались сверху */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
+  position: relative;
+  z-index: 2; /* карточки поверх заголовка */
 }
 
 .promo__viewport::-webkit-scrollbar {
