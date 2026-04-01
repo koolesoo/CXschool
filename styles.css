@@ -104,7 +104,7 @@ body {
 
 .promo__viewport {
   width: 100%;
-  margin-top: 8px; /* чуть ниже от заголовка */
+  margin-top: 16px; /* чуть ниже от заголовка */
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
