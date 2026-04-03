@@ -164,15 +164,15 @@ body {
   color: rgba(3, 3, 6, 0.88); /* как у заголовка КП, но меньше размер */
 }
 
-.promo__summaryBody {
-  margin: 16px 0 0;
+.promo__summaryHint {
+  margin: 12px 0 0;
   max-width: 960px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
     "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 24px;
-  color: rgba(3, 3, 6, 0.78);
+  line-height: 22px;
+  color: rgba(3, 3, 6, 0.6);
 }
 
 .promoCard {
@@ -335,6 +335,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: rgba(3, 3, 6, 0.9);
+  white-space: pre-line;
 }
 
 .popup__close {
