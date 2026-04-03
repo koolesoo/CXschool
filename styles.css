@@ -253,10 +253,10 @@ body {
   user-select: none;
 }
 
-/* 0.png и 5.png: в макете цифра крупнее, чем у 10.png — уменьшаем ширину, чтобы визуально совпасть */
+/* 0.png и 5.png: уже по ширине, чем 10.png; top как у базового, чтобы не сидели ниже */
 .promoCard__imgTop--tall {
   width: 240px;
-  top: -58px;
+  top: -66px;
 }
 
 .promoCard__text {
