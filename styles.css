@@ -107,8 +107,10 @@ body {
 .promo__viewport {
   width: 100%;
   margin-top: 32px; /* еще ниже от заголовка, чтобы картинки не пересекались с ним */
+  padding-top: 36px; /* запас под вылет картинок и scale при ховере (overflow-x ломает overflow-y: visible) */
+  box-sizing: border-box;
   overflow-x: auto;
-  overflow-y: visible; /* чтобы при ховере карточки не обрезались сверху */
+  overflow-y: visible; /* в паре с overflow-x часто даёт clip; компенсируем padding-top */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
   position: relative;
@@ -126,7 +128,7 @@ body {
   overflow-x: visible;
   overscroll-behavior-block: contain;
   overscroll-behavior-x: contain;
-  padding-top: 40px;
+  padding-top: 72px;
   padding-bottom: 24px;
   transform: translateX(0);
 }
@@ -201,7 +203,7 @@ body {
   -ms-user-select: none;
   transition: transform 520ms ease;
   will-change: transform;
-  transform-origin: center bottom;
+  transform-origin: center center;
 }
 
 .promoCard:hover {
@@ -251,6 +253,11 @@ body {
   z-index: 3;
   pointer-events: none;
   user-select: none;
+}
+
+/* 0.png / 5.png выше по файлу, чем 10.png — чуть ниже, чтобы не упирались в край вьюпорта при hover */
+.promoCard__imgTop--tallAsset {
+  top: -54px;
 }
 
 .promoCard__text {
