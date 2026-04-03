@@ -259,16 +259,18 @@ body {
   right: 32px;
   bottom: 32px;
   top: auto;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   height: 100px; /* фиксируем высоту блока, чтобы заголовки не “плыли” */
   cursor: pointer;
 }
 
 .promoCard__name {
+  width: 100%;
+  text-align: center;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
     "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
   font-size: 22px;
@@ -282,7 +284,9 @@ body {
 }
 
 .promoCard__desc {
+  width: 100%;
   margin-top: 8px;
+  text-align: center;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
     "Noto Sans", sans-serif, "Helvetica Neue", Helvetica;
   font-size: 16px;
